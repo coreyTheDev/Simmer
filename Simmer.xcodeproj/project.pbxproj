@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0ABB11202502E5006EA0B3 /* MockFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ABB10202502E5006EA0B3 /* MockFetchResolver.swift */; };
+		7A0ABB1420250580006EA0B3 /* MockSessionFetchManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ABB1320250580006EA0B3 /* MockSessionFetchManagerDelegate.swift */; };
 		7A0D6D4F201BC09000067A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D4E201BC09000067A04 /* AppDelegate.swift */; };
-		7A0D6D51201BC09000067A04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D50201BC09000067A04 /* ViewController.swift */; };
+		7A0D6D51201BC09000067A04 /* SessionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D50201BC09000067A04 /* SessionListViewController.swift */; };
 		7A0D6D54201BC09000067A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D6D52201BC09000067A04 /* Main.storyboard */; };
 		7A0D6D57201BC09000067A04 /* Simmer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D55201BC09000067A04 /* Simmer.xcdatamodeld */; };
 		7A0D6D59201BC09000067A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D6D58201BC09000067A04 /* Assets.xcassets */; };
 		7A0D6D5C201BC09000067A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D6D5A201BC09000067A04 /* LaunchScreen.storyboard */; };
-		7A0D6D67201BC09000067A04 /* SimmerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D66201BC09000067A04 /* SimmerTests.swift */; };
+		7A0D6D67201BC09000067A04 /* FetchManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D66201BC09000067A04 /* FetchManagerTests.swift */; };
+		7A0D6D732022704200067A04 /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D722022704200067A04 /* FetchManager.swift */; };
+		7A0D6D77202271C100067A04 /* FetchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D76202271C100067A04 /* FetchResult.swift */; };
+		7A0D6D79202272F000067A04 /* SampleFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */; };
+		7A0D6D7B202272FA00067A04 /* FetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D7A202272FA00067A04 /* FetchResolver.swift */; };
+		7A0D6D7D20227CAC00067A04 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D7C20227CAC00067A04 /* Session.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +34,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A0ABB10202502E5006EA0B3 /* MockFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchResolver.swift; sourceTree = "<group>"; };
+		7A0ABB1320250580006EA0B3 /* MockSessionFetchManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSessionFetchManagerDelegate.swift; sourceTree = "<group>"; };
 		7A0D6D4B201BC09000067A04 /* Simmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0D6D4E201BC09000067A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A0D6D50201BC09000067A04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A0D6D50201BC09000067A04 /* SessionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListViewController.swift; sourceTree = "<group>"; };
 		7A0D6D53201BC09000067A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A0D6D56201BC09000067A04 /* Simmer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Simmer.xcdatamodel; sourceTree = "<group>"; };
 		7A0D6D58201BC09000067A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A0D6D5B201BC09000067A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A0D6D5D201BC09000067A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A0D6D62201BC09000067A04 /* SimmerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimmerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A0D6D66201BC09000067A04 /* SimmerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimmerTests.swift; sourceTree = "<group>"; };
+		7A0D6D66201BC09000067A04 /* FetchManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManagerTests.swift; sourceTree = "<group>"; };
 		7A0D6D68201BC09000067A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A0D6D722022704200067A04 /* FetchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
+		7A0D6D76202271C100067A04 /* FetchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResult.swift; sourceTree = "<group>"; };
+		7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFetchResolver.swift; sourceTree = "<group>"; };
+		7A0D6D7A202272FA00067A04 /* FetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResolver.swift; sourceTree = "<group>"; };
+		7A0D6D7C20227CAC00067A04 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A0ABB0F202502A4006EA0B3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7A0ABB10202502E5006EA0B3 /* MockFetchResolver.swift */,
+				7A0ABB1320250580006EA0B3 /* MockSessionFetchManagerDelegate.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7A0ABB1220250528006EA0B3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7A0D6D66201BC09000067A04 /* FetchManagerTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		7A0D6D42201BC09000067A04 = {
 			isa = PBXGroup;
 			children = (
@@ -80,12 +111,13 @@
 			isa = PBXGroup;
 			children = (
 				7A0D6D4E201BC09000067A04 /* AppDelegate.swift */,
-				7A0D6D50201BC09000067A04 /* ViewController.swift */,
+				7A0D6D75202270DE00067A04 /* View Controllers */,
+				7A0D6D742022706400067A04 /* Data Managers */,
+				7A0D6D71202105E900067A04 /* Models */,
 				7A0D6D52201BC09000067A04 /* Main.storyboard */,
 				7A0D6D58201BC09000067A04 /* Assets.xcassets */,
 				7A0D6D5A201BC09000067A04 /* LaunchScreen.storyboard */,
 				7A0D6D5D201BC09000067A04 /* Info.plist */,
-				7A0D6D55201BC09000067A04 /* Simmer.xcdatamodeld */,
 			);
 			path = Simmer;
 			sourceTree = "<group>";
@@ -93,10 +125,39 @@
 		7A0D6D65201BC09000067A04 /* SimmerTests */ = {
 			isa = PBXGroup;
 			children = (
-				7A0D6D66201BC09000067A04 /* SimmerTests.swift */,
+				7A0ABB1220250528006EA0B3 /* Tests */,
+				7A0ABB0F202502A4006EA0B3 /* Mocks */,
 				7A0D6D68201BC09000067A04 /* Info.plist */,
 			);
 			path = SimmerTests;
+			sourceTree = "<group>";
+		};
+		7A0D6D71202105E900067A04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A0D6D55201BC09000067A04 /* Simmer.xcdatamodeld */,
+				7A0D6D7C20227CAC00067A04 /* Session.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7A0D6D742022706400067A04 /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7A0D6D722022704200067A04 /* FetchManager.swift */,
+				7A0D6D7A202272FA00067A04 /* FetchResolver.swift */,
+				7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */,
+				7A0D6D76202271C100067A04 /* FetchResult.swift */,
+			);
+			path = "Data Managers";
+			sourceTree = "<group>";
+		};
+		7A0D6D75202270DE00067A04 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A0D6D50201BC09000067A04 /* SessionListViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A0D6D51201BC09000067A04 /* ViewController.swift in Sources */,
+				7A0D6D7B202272FA00067A04 /* FetchResolver.swift in Sources */,
+				7A0D6D51201BC09000067A04 /* SessionListViewController.swift in Sources */,
+				7A0D6D732022704200067A04 /* FetchManager.swift in Sources */,
+				7A0D6D79202272F000067A04 /* SampleFetchResolver.swift in Sources */,
+				7A0D6D7D20227CAC00067A04 /* Session.swift in Sources */,
 				7A0D6D4F201BC09000067A04 /* AppDelegate.swift in Sources */,
 				7A0D6D57201BC09000067A04 /* Simmer.xcdatamodeld in Sources */,
+				7A0D6D77202271C100067A04 /* FetchResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A0D6D67201BC09000067A04 /* SimmerTests.swift in Sources */,
+				7A0ABB11202502E5006EA0B3 /* MockFetchResolver.swift in Sources */,
+				7A0D6D67201BC09000067A04 /* FetchManagerTests.swift in Sources */,
+				7A0ABB1420250580006EA0B3 /* MockSessionFetchManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
