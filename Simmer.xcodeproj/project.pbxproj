@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4590E8F0DABB5ECCDB0F39EB /* Pods_SimmerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D2E02A13DD6A35A776B944 /* Pods_SimmerTests.framework */; };
+		5B6E38594E758FEECEF46F17 /* Pods_Simmer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43FDAD9FAECA6992E8E2D3E /* Pods_Simmer.framework */; };
 		7A0ABB11202502E5006EA0B3 /* MockFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ABB10202502E5006EA0B3 /* MockFetchResolver.swift */; };
 		7A0ABB1420250580006EA0B3 /* MockSessionFetchManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ABB1320250580006EA0B3 /* MockSessionFetchManagerDelegate.swift */; };
 		7A0D6D4F201BC09000067A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D4E201BC09000067A04 /* AppDelegate.swift */; };
 		7A0D6D51201BC09000067A04 /* SessionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D50201BC09000067A04 /* SessionListViewController.swift */; };
 		7A0D6D54201BC09000067A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D6D52201BC09000067A04 /* Main.storyboard */; };
-		7A0D6D57201BC09000067A04 /* Simmer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D55201BC09000067A04 /* Simmer.xcdatamodeld */; };
 		7A0D6D59201BC09000067A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D6D58201BC09000067A04 /* Assets.xcassets */; };
 		7A0D6D5C201BC09000067A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D6D5A201BC09000067A04 /* LaunchScreen.storyboard */; };
 		7A0D6D67201BC09000067A04 /* FetchManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D66201BC09000067A04 /* FetchManagerTests.swift */; };
@@ -34,13 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B2063679E6658B8A1CFAD25 /* Pods-SimmerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimmerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimmerTests/Pods-SimmerTests.release.xcconfig"; sourceTree = "<group>"; };
+		3293AEA53902EAF2EFABE487 /* Pods-SimmerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimmerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimmerTests/Pods-SimmerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4950183A79E0DE6BA8937D41 /* Pods-Simmer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simmer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Simmer/Pods-Simmer.debug.xcconfig"; sourceTree = "<group>"; };
 		7A0ABB10202502E5006EA0B3 /* MockFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchResolver.swift; sourceTree = "<group>"; };
 		7A0ABB1320250580006EA0B3 /* MockSessionFetchManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSessionFetchManagerDelegate.swift; sourceTree = "<group>"; };
 		7A0D6D4B201BC09000067A04 /* Simmer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simmer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0D6D4E201BC09000067A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A0D6D50201BC09000067A04 /* SessionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListViewController.swift; sourceTree = "<group>"; };
 		7A0D6D53201BC09000067A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7A0D6D56201BC09000067A04 /* Simmer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Simmer.xcdatamodel; sourceTree = "<group>"; };
 		7A0D6D58201BC09000067A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A0D6D5B201BC09000067A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A0D6D5D201BC09000067A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +55,9 @@
 		7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFetchResolver.swift; sourceTree = "<group>"; };
 		7A0D6D7A202272FA00067A04 /* FetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResolver.swift; sourceTree = "<group>"; };
 		7A0D6D7C20227CAC00067A04 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		A43FDAD9FAECA6992E8E2D3E /* Pods_Simmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D2E02A13DD6A35A776B944 /* Pods_SimmerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimmerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE13EFE84C84AAC3C61E9985 /* Pods-Simmer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simmer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simmer/Pods-Simmer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6E38594E758FEECEF46F17 /* Pods_Simmer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +73,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4590E8F0DABB5ECCDB0F39EB /* Pods_SimmerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21CBCE6671F5A1C80213EC44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A43FDAD9FAECA6992E8E2D3E /* Pods_Simmer.framework */,
+				A5D2E02A13DD6A35A776B944 /* Pods_SimmerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7A0ABB0F202502A4006EA0B3 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +112,8 @@
 				7A0D6D4D201BC09000067A04 /* Simmer */,
 				7A0D6D65201BC09000067A04 /* SimmerTests */,
 				7A0D6D4C201BC09000067A04 /* Products */,
+				D193830FE307D4D146962FCF /* Pods */,
+				21CBCE6671F5A1C80213EC44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,7 +154,6 @@
 		7A0D6D71202105E900067A04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7A0D6D55201BC09000067A04 /* Simmer.xcdatamodeld */,
 				7A0D6D7C20227CAC00067A04 /* Session.swift */,
 			);
 			path = Models;
@@ -160,6 +178,17 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		D193830FE307D4D146962FCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4950183A79E0DE6BA8937D41 /* Pods-Simmer.debug.xcconfig */,
+				CE13EFE84C84AAC3C61E9985 /* Pods-Simmer.release.xcconfig */,
+				3293AEA53902EAF2EFABE487 /* Pods-SimmerTests.debug.xcconfig */,
+				1B2063679E6658B8A1CFAD25 /* Pods-SimmerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A0D6D6B201BC09000067A04 /* Build configuration list for PBXNativeTarget "Simmer" */;
 			buildPhases = (
+				EEB95AFB77FF7CEA70F09004 /* [CP] Check Pods Manifest.lock */,
 				7A0D6D47201BC09000067A04 /* Sources */,
 				7A0D6D48201BC09000067A04 /* Frameworks */,
 				7A0D6D49201BC09000067A04 /* Resources */,
+				0CCC59063F47BEDFA66567D3 /* [CP] Embed Pods Frameworks */,
+				7DDB6ECAF478526D822DD9CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A0D6D6E201BC09000067A04 /* Build configuration list for PBXNativeTarget "SimmerTests" */;
 			buildPhases = (
+				2714179CC87ADE857AB372B9 /* [CP] Check Pods Manifest.lock */,
 				7A0D6D5E201BC09000067A04 /* Sources */,
 				7A0D6D5F201BC09000067A04 /* Frameworks */,
 				7A0D6D60201BC09000067A04 /* Resources */,
+				5F0E1EE1C85A1617DBEDB821 /* [CP] Embed Pods Frameworks */,
+				07A95C7A2624C4211DC17F91 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +293,110 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07A95C7A2624C4211DC17F91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimmerTests/Pods-SimmerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CCC59063F47BEDFA66567D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Simmer/Pods-Simmer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simmer/Pods-Simmer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2714179CC87ADE857AB372B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimmerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F0E1EE1C85A1617DBEDB821 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimmerTests/Pods-SimmerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DDB6ECAF478526D822DD9CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Simmer/Pods-Simmer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB95AFB77FF7CEA70F09004 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simmer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A0D6D47201BC09000067A04 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -269,7 +408,6 @@
 				7A0D6D79202272F000067A04 /* SampleFetchResolver.swift in Sources */,
 				7A0D6D7D20227CAC00067A04 /* Session.swift in Sources */,
 				7A0D6D4F201BC09000067A04 /* AppDelegate.swift in Sources */,
-				7A0D6D57201BC09000067A04 /* Simmer.xcdatamodeld in Sources */,
 				7A0D6D77202271C100067A04 /* FetchResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +561,7 @@
 		};
 		7A0D6D6C201BC09000067A04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4950183A79E0DE6BA8937D41 /* Pods-Simmer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +577,7 @@
 		};
 		7A0D6D6D201BC09000067A04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE13EFE84C84AAC3C61E9985 /* Pods-Simmer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -453,6 +593,7 @@
 		};
 		7A0D6D6F201BC09000067A04 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3293AEA53902EAF2EFABE487 /* Pods-SimmerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -470,6 +611,7 @@
 		};
 		7A0D6D70201BC09000067A04 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B2063679E6658B8A1CFAD25 /* Pods-SimmerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,19 +658,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7A0D6D55201BC09000067A04 /* Simmer.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7A0D6D56201BC09000067A04 /* Simmer.xcdatamodel */,
-			);
-			currentVersion = 7A0D6D56201BC09000067A04 /* Simmer.xcdatamodel */;
-			path = Simmer.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7A0D6D43201BC09000067A04 /* Project object */;
 }
