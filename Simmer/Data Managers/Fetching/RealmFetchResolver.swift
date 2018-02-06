@@ -11,11 +11,19 @@ import RealmSwift
 
 struct RealmFetchResolver: FetchResolver {
     
+    private let realmManager: RealmManager
+    
+    init(realmManager: RealmManager = ApplicationDirectoryRealmManager()) {
+        self.realmManager = realmManager
+    }
+    
     func fetchSessions(completion: ((FetchResult) -> Void)) {
-        
         do {
-            let realm = try Realm()
+            // we want to test that when an error is caught it throws the error
+            let realm = try realmManager.getRealmInstance()
             let storedSessions = realm.objects(StoredSession.self)
+            
+            // we want to test that the displayableSessions it returns are all that we expect
             var displayableSessions = [DisplayableSession]()
             for storedSession in storedSessions {
                 guard let displayableSession = storedSession.createDisplayableSession() else {
@@ -29,6 +37,5 @@ struct RealmFetchResolver: FetchResolver {
             completion(FetchResult.failure(error))
         }
     }
-    
     
 }

@@ -1,5 +1,5 @@
 //
-//  Session.swift
+//  StoredSession.swift
 //  Simmer
 //
 //  Created by Corey Zanotti on 1/31/18.
@@ -8,14 +8,6 @@
 
 import Foundation
 import RealmSwift
-
-protocol SessionDisplayable {
-    func createDisplayableSession() -> DisplayableSession?
-}
-
-struct DisplayableSession {
-    let title: String
-}
 
 class StoredSession: Object {
     @objc dynamic var title = "Session Title"

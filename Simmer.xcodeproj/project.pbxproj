@@ -21,7 +21,13 @@
 		7A0D6D77202271C100067A04 /* FetchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D76202271C100067A04 /* FetchResult.swift */; };
 		7A0D6D79202272F000067A04 /* SampleFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */; };
 		7A0D6D7B202272FA00067A04 /* FetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D7A202272FA00067A04 /* FetchResolver.swift */; };
-		7A0D6D7D20227CAC00067A04 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D7C20227CAC00067A04 /* Session.swift */; };
+		7A0D6D7D20227CAC00067A04 /* StoredSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D7C20227CAC00067A04 /* StoredSession.swift */; };
+		7A7B1129202A612300C4B4B2 /* DisplayableSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1128202A612300C4B4B2 /* DisplayableSession.swift */; };
+		7A7B112C202A628D00C4B4B2 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B112B202A628D00C4B4B2 /* RealmManager.swift */; };
+		7A7B1130202A649000C4B4B2 /* StoredSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B112F202A649000C4B4B2 /* StoredSessionTests.swift */; };
+		7A7B1133202A65EC00C4B4B2 /* CustomTestAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1132202A65EC00C4B4B2 /* CustomTestAssertions.swift */; };
+		7A7B1135202A69DA00C4B4B2 /* RealmFetchResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1134202A69DA00C4B4B2 /* RealmFetchResolverTests.swift */; };
+		7A7B1137202A6A2E00C4B4B2 /* MockRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1136202A6A2E00C4B4B2 /* MockRealmManager.swift */; };
 		7AAEAE3D202A53CD0005F1F3 /* RealmFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +61,13 @@
 		7A0D6D76202271C100067A04 /* FetchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResult.swift; sourceTree = "<group>"; };
 		7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFetchResolver.swift; sourceTree = "<group>"; };
 		7A0D6D7A202272FA00067A04 /* FetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResolver.swift; sourceTree = "<group>"; };
-		7A0D6D7C20227CAC00067A04 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		7A0D6D7C20227CAC00067A04 /* StoredSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredSession.swift; sourceTree = "<group>"; };
+		7A7B1128202A612300C4B4B2 /* DisplayableSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableSession.swift; sourceTree = "<group>"; };
+		7A7B112B202A628D00C4B4B2 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		7A7B112F202A649000C4B4B2 /* StoredSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredSessionTests.swift; sourceTree = "<group>"; };
+		7A7B1132202A65EC00C4B4B2 /* CustomTestAssertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTestAssertions.swift; sourceTree = "<group>"; };
+		7A7B1134202A69DA00C4B4B2 /* RealmFetchResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFetchResolverTests.swift; sourceTree = "<group>"; };
+		7A7B1136202A6A2E00C4B4B2 /* MockRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRealmManager.swift; sourceTree = "<group>"; };
 		7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFetchResolver.swift; sourceTree = "<group>"; };
 		A43FDAD9FAECA6992E8E2D3E /* Pods_Simmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2E02A13DD6A35A776B944 /* Pods_SimmerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimmerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7A0ABB10202502E5006EA0B3 /* MockFetchResolver.swift */,
+				7A7B1136202A6A2E00C4B4B2 /* MockRealmManager.swift */,
 				7A0ABB1320250580006EA0B3 /* MockSessionFetchManagerDelegate.swift */,
 			);
 			path = Mocks;
@@ -104,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				7A0D6D66201BC09000067A04 /* FetchManagerTests.swift */,
+				7A7B1134202A69DA00C4B4B2 /* RealmFetchResolverTests.swift */,
+				7A7B112F202A649000C4B4B2 /* StoredSessionTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -146,6 +161,7 @@
 		7A0D6D65201BC09000067A04 /* SimmerTests */ = {
 			isa = PBXGroup;
 			children = (
+				7A7B1131202A65DE00C4B4B2 /* Helpers */,
 				7A0ABB1220250528006EA0B3 /* Tests */,
 				7A0ABB0F202502A4006EA0B3 /* Mocks */,
 				7A0D6D68201BC09000067A04 /* Info.plist */,
@@ -156,7 +172,8 @@
 		7A0D6D71202105E900067A04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7A0D6D7C20227CAC00067A04 /* Session.swift */,
+				7A7B1128202A612300C4B4B2 /* DisplayableSession.swift */,
+				7A0D6D7C20227CAC00067A04 /* StoredSession.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -164,11 +181,8 @@
 		7A0D6D742022706400067A04 /* Data Managers */ = {
 			isa = PBXGroup;
 			children = (
-				7A0D6D722022704200067A04 /* FetchManager.swift */,
-				7A0D6D7A202272FA00067A04 /* FetchResolver.swift */,
-				7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */,
-				7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */,
-				7A0D6D76202271C100067A04 /* FetchResult.swift */,
+				7A7B112A202A627900C4B4B2 /* Fetching */,
+				7A7B112B202A628D00C4B4B2 /* RealmManager.swift */,
 			);
 			path = "Data Managers";
 			sourceTree = "<group>";
@@ -179,6 +193,26 @@
 				7A0D6D50201BC09000067A04 /* SessionListViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7A7B112A202A627900C4B4B2 /* Fetching */ = {
+			isa = PBXGroup;
+			children = (
+				7A0D6D722022704200067A04 /* FetchManager.swift */,
+				7A0D6D7A202272FA00067A04 /* FetchResolver.swift */,
+				7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */,
+				7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */,
+				7A0D6D76202271C100067A04 /* FetchResult.swift */,
+			);
+			path = Fetching;
+			sourceTree = "<group>";
+		};
+		7A7B1131202A65DE00C4B4B2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7A7B1132202A65EC00C4B4B2 /* CustomTestAssertions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D193830FE307D4D146962FCF /* Pods */ = {
@@ -410,7 +444,9 @@
 				7A0D6D51201BC09000067A04 /* SessionListViewController.swift in Sources */,
 				7A0D6D732022704200067A04 /* FetchManager.swift in Sources */,
 				7A0D6D79202272F000067A04 /* SampleFetchResolver.swift in Sources */,
-				7A0D6D7D20227CAC00067A04 /* Session.swift in Sources */,
+				7A0D6D7D20227CAC00067A04 /* StoredSession.swift in Sources */,
+				7A7B1129202A612300C4B4B2 /* DisplayableSession.swift in Sources */,
+				7A7B112C202A628D00C4B4B2 /* RealmManager.swift in Sources */,
 				7A0D6D4F201BC09000067A04 /* AppDelegate.swift in Sources */,
 				7A0D6D77202271C100067A04 /* FetchResult.swift in Sources */,
 			);
@@ -423,6 +459,10 @@
 				7A0ABB11202502E5006EA0B3 /* MockFetchResolver.swift in Sources */,
 				7A0D6D67201BC09000067A04 /* FetchManagerTests.swift in Sources */,
 				7A0ABB1420250580006EA0B3 /* MockSessionFetchManagerDelegate.swift in Sources */,
+				7A7B1137202A6A2E00C4B4B2 /* MockRealmManager.swift in Sources */,
+				7A7B1130202A649000C4B4B2 /* StoredSessionTests.swift in Sources */,
+				7A7B1135202A69DA00C4B4B2 /* RealmFetchResolverTests.swift in Sources */,
+				7A7B1133202A65EC00C4B4B2 /* CustomTestAssertions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
