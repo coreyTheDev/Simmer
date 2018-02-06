@@ -13,7 +13,7 @@ import Foundation
 struct SampleFetchResolver: FetchResolver {
     
     func fetchSessions(completion: ((FetchResult) -> Void)) {
-        completion(FetchResult.success([Session()]))
+        completion(FetchResult.success([DisplayableSession(title: "Test")]))
     }
     
 }

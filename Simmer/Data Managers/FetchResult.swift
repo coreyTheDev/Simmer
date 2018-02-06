@@ -9,6 +9,6 @@
 import Foundation
 
 enum FetchResult {
-    case success([Session])
+    case success([DisplayableSession])
     case failure(Error?)
 }

@@ -7,7 +7,22 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Session {
-    let title: String = "Sample Title"
+protocol SessionDisplayable {
+    func createDisplayableSession() -> DisplayableSession?
+}
+
+struct DisplayableSession {
+    let title: String
+}
+
+class StoredSession: Object {
+    @objc dynamic var title = "Session Title"
+}
+
+extension StoredSession: SessionDisplayable {
+    func createDisplayableSession() -> DisplayableSession? {
+        return DisplayableSession(title: self.title)
+    }
 }

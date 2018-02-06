@@ -22,6 +22,7 @@
 		7A0D6D79202272F000067A04 /* SampleFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */; };
 		7A0D6D7B202272FA00067A04 /* FetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D7A202272FA00067A04 /* FetchResolver.swift */; };
 		7A0D6D7D20227CAC00067A04 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D7C20227CAC00067A04 /* Session.swift */; };
+		7AAEAE3D202A53CD0005F1F3 /* RealmFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFetchResolver.swift; sourceTree = "<group>"; };
 		7A0D6D7A202272FA00067A04 /* FetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResolver.swift; sourceTree = "<group>"; };
 		7A0D6D7C20227CAC00067A04 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFetchResolver.swift; sourceTree = "<group>"; };
 		A43FDAD9FAECA6992E8E2D3E /* Pods_Simmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2E02A13DD6A35A776B944 /* Pods_SimmerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimmerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE13EFE84C84AAC3C61E9985 /* Pods-Simmer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simmer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simmer/Pods-Simmer.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				7A0D6D722022704200067A04 /* FetchManager.swift */,
 				7A0D6D7A202272FA00067A04 /* FetchResolver.swift */,
 				7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */,
+				7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */,
 				7A0D6D76202271C100067A04 /* FetchResult.swift */,
 			);
 			path = "Data Managers";
@@ -402,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AAEAE3D202A53CD0005F1F3 /* RealmFetchResolver.swift in Sources */,
 				7A0D6D7B202272FA00067A04 /* FetchResolver.swift in Sources */,
 				7A0D6D51201BC09000067A04 /* SessionListViewController.swift in Sources */,
 				7A0D6D732022704200067A04 /* FetchManager.swift in Sources */,
