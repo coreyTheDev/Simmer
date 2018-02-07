@@ -11,6 +11,11 @@ import RealmSwift
 
 class StoredSession: Object {
     @objc dynamic var title = "Session Title"
+    
+    convenience init(title: String) {
+        self.init()
+        self.title = title
+    }
 }
 
 extension StoredSession: SessionDisplayable {
