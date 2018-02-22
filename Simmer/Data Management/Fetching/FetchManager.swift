@@ -12,7 +12,7 @@ protocol FetchManagerDelegate: class {
     func fetchCompleted(with result: FetchResult)
 }
 
-struct FetchManager {
+class FetchManager {
     
     weak var delegate: FetchManagerDelegate?
     private let resolver: FetchResolver

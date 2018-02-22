@@ -8,12 +8,10 @@
 
 import Foundation
 
-//TODO: This will implement the SessionFetcher protocol to populate the initial sections
-
 struct SampleFetchResolver: FetchResolver {
     
     func fetchSessions(completion: ((FetchResult) -> Void)) {
-        completion(FetchResult.success([Session()]))
+        completion(FetchResult.success([StoredSession(title: "Test")]))
     }
     
 }

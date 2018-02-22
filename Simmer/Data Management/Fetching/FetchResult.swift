@@ -1,5 +1,5 @@
 //
-//  Session.swift
+//  FetchResult.swift
 //  Simmer
 //
 //  Created by Corey Zanotti on 1/31/18.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct Session {
-    let title: String = "Sample Title"
+enum FetchResult {
+    case success([DisplayableSession])
+    case failure(Error?)
 }

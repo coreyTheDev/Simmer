@@ -11,7 +11,7 @@ import Foundation
 
 struct MockFetchResolver: FetchResolver {
     
-    var result: FetchResult = .success([Session()])
+    var result: FetchResult = .success([MockDisplayableSession(title: "Test")])
     func fetchSessions(completion: ((FetchResult) -> Void)) {
         completion(result)
     }
