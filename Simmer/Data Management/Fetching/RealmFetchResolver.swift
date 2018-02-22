@@ -26,10 +26,7 @@ struct RealmFetchResolver: FetchResolver {
             // we want to test that the displayableSessions it returns are all that we expect
             var displayableSessions = [DisplayableSession]()
             for storedSession in storedSessions {
-                guard let displayableSession = storedSession.createDisplayableSession() else {
-                    continue
-                }
-                displayableSessions.append(displayableSession)
+                displayableSessions.append(storedSession as DisplayableSession)
             }
             
             completion(.success(displayableSessions))

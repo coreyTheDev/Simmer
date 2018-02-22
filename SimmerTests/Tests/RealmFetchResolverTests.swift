@@ -34,9 +34,9 @@ final class RealmFetchResolverTests: XCTestCase {
     func test_fetchSessions_itCreatesTheProperDisplayableSessions() throws {
         // Arrange
         try! populateMockRealm()
-        var expected = [DisplayableSession]()
+        var expected = [StoredSession]()
         for i in 0..<5 {
-            expected.append(DisplayableSession(title: "\(i)"))
+            expected.append(StoredSession(title: "\(i)"))
         }
         
         // Act
@@ -44,7 +44,11 @@ final class RealmFetchResolverTests: XCTestCase {
             // Assert
             switch result {
             case .success(let displayableSessions):
-                XCTAssertEqual(displayableSessions, expected)
+                guard let actual = displayableSessions as? [StoredSession] else {
+                    XCTFail("fetchResolver.fetchSessions succeeded but returned result that wasn't [StoredSession]")
+                    return
+                }
+                XCTAssertEqual(actual, expected)
             case .failure(let error):
                 XCTFail(error?.localizedDescription ?? "test_fetchSessions_itCreatesTheProperDisplayableSessions failed")
             }

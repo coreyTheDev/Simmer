@@ -22,13 +22,24 @@
 		7A0D6D79202272F000067A04 /* SampleFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */; };
 		7A0D6D7B202272FA00067A04 /* FetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D7A202272FA00067A04 /* FetchResolver.swift */; };
 		7A0D6D7D20227CAC00067A04 /* StoredSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D6D7C20227CAC00067A04 /* StoredSession.swift */; };
+		7A0EEFC1203E096800FA709D /* MoodEntryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EEFBF203E096800FA709D /* MoodEntryCollectionViewCell.swift */; };
+		7A0EEFC2203E096800FA709D /* MoodEntryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0EEFC0203E096800FA709D /* MoodEntryCollectionViewCell.xib */; };
+		7A0EEFC6203E1FFA00FA709D /* KeyboardNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EEFC5203E1FFA00FA709D /* KeyboardNotificationHandler.swift */; };
+		7A0EEFCA203E270F00FA709D /* KeyboardNotificationHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EEFC9203E270F00FA709D /* KeyboardNotificationHandlerTests.swift */; };
+		7A0EEFCC203E27BA00FA709D /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EEFCB203E27BA00FA709D /* MockNotificationCenter.swift */; };
+		7A5C10252035FDD90004C89E /* MoodCellSizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C10242035FDD90004C89E /* MoodCellSizer.swift */; };
 		7A7B1129202A612300C4B4B2 /* DisplayableSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1128202A612300C4B4B2 /* DisplayableSession.swift */; };
 		7A7B112C202A628D00C4B4B2 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B112B202A628D00C4B4B2 /* RealmManager.swift */; };
-		7A7B1130202A649000C4B4B2 /* StoredSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B112F202A649000C4B4B2 /* StoredSessionTests.swift */; };
 		7A7B1133202A65EC00C4B4B2 /* CustomTestAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1132202A65EC00C4B4B2 /* CustomTestAssertions.swift */; };
 		7A7B1135202A69DA00C4B4B2 /* RealmFetchResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1134202A69DA00C4B4B2 /* RealmFetchResolverTests.swift */; };
 		7A7B1137202A6A2E00C4B4B2 /* MockRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1136202A6A2E00C4B4B2 /* MockRealmManager.swift */; };
 		7AAEAE3D202A53CD0005F1F3 /* RealmFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */; };
+		7AD4AD2D2030CE9C00A24B42 /* DisplayableSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD4AD2C2030CE9C00A24B42 /* DisplayableSessionCell.swift */; };
+		7AFB706E20338AF200E616E6 /* MockDisplayableSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB706D20338AF200E616E6 /* MockDisplayableSession.swift */; };
+		7AFB7070203393B500E616E6 /* SessionComposerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB706F203393B500E616E6 /* SessionComposerViewController.swift */; };
+		7AFB707D2034B70000E616E6 /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB707B2034B70000E616E6 /* MoodCollectionViewCell.swift */; };
+		7AFB707E2034B70000E616E6 /* MoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AFB707C2034B70000E616E6 /* MoodCollectionViewCell.xib */; };
+		7AFB70802034B90E00E616E6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB707F2034B90E00E616E6 /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,13 +73,24 @@
 		7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFetchResolver.swift; sourceTree = "<group>"; };
 		7A0D6D7A202272FA00067A04 /* FetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResolver.swift; sourceTree = "<group>"; };
 		7A0D6D7C20227CAC00067A04 /* StoredSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredSession.swift; sourceTree = "<group>"; };
+		7A0EEFBF203E096800FA709D /* MoodEntryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7A0EEFC0203E096800FA709D /* MoodEntryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodEntryCollectionViewCell.xib; sourceTree = "<group>"; };
+		7A0EEFC5203E1FFA00FA709D /* KeyboardNotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationHandler.swift; sourceTree = "<group>"; };
+		7A0EEFC9203E270F00FA709D /* KeyboardNotificationHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationHandlerTests.swift; sourceTree = "<group>"; };
+		7A0EEFCB203E27BA00FA709D /* MockNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
+		7A5C10242035FDD90004C89E /* MoodCellSizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCellSizer.swift; sourceTree = "<group>"; };
 		7A7B1128202A612300C4B4B2 /* DisplayableSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableSession.swift; sourceTree = "<group>"; };
 		7A7B112B202A628D00C4B4B2 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		7A7B112F202A649000C4B4B2 /* StoredSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredSessionTests.swift; sourceTree = "<group>"; };
 		7A7B1132202A65EC00C4B4B2 /* CustomTestAssertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTestAssertions.swift; sourceTree = "<group>"; };
 		7A7B1134202A69DA00C4B4B2 /* RealmFetchResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFetchResolverTests.swift; sourceTree = "<group>"; };
 		7A7B1136202A6A2E00C4B4B2 /* MockRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRealmManager.swift; sourceTree = "<group>"; };
 		7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFetchResolver.swift; sourceTree = "<group>"; };
+		7AD4AD2C2030CE9C00A24B42 /* DisplayableSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableSessionCell.swift; sourceTree = "<group>"; };
+		7AFB706D20338AF200E616E6 /* MockDisplayableSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDisplayableSession.swift; sourceTree = "<group>"; };
+		7AFB706F203393B500E616E6 /* SessionComposerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionComposerViewController.swift; sourceTree = "<group>"; };
+		7AFB707B2034B70000E616E6 /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		7AFB707C2034B70000E616E6 /* MoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodCollectionViewCell.xib; sourceTree = "<group>"; };
+		7AFB707F2034B90E00E616E6 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		A43FDAD9FAECA6992E8E2D3E /* Pods_Simmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2E02A13DD6A35A776B944 /* Pods_SimmerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimmerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE13EFE84C84AAC3C61E9985 /* Pods-Simmer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simmer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Simmer/Pods-Simmer.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,9 +128,11 @@
 		7A0ABB0F202502A4006EA0B3 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				7AFB706D20338AF200E616E6 /* MockDisplayableSession.swift */,
 				7A0ABB10202502E5006EA0B3 /* MockFetchResolver.swift */,
 				7A7B1136202A6A2E00C4B4B2 /* MockRealmManager.swift */,
 				7A0ABB1320250580006EA0B3 /* MockSessionFetchManagerDelegate.swift */,
+				7A0EEFCB203E27BA00FA709D /* MockNotificationCenter.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -118,7 +142,7 @@
 			children = (
 				7A0D6D66201BC09000067A04 /* FetchManagerTests.swift */,
 				7A7B1134202A69DA00C4B4B2 /* RealmFetchResolverTests.swift */,
-				7A7B112F202A649000C4B4B2 /* StoredSessionTests.swift */,
+				7A0EEFC9203E270F00FA709D /* KeyboardNotificationHandlerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -147,12 +171,12 @@
 			isa = PBXGroup;
 			children = (
 				7A0D6D4E201BC09000067A04 /* AppDelegate.swift */,
-				7A0D6D75202270DE00067A04 /* View Controllers */,
-				7A0D6D742022706400067A04 /* Data Managers */,
-				7A0D6D71202105E900067A04 /* Models */,
 				7A0D6D52201BC09000067A04 /* Main.storyboard */,
-				7A0D6D58201BC09000067A04 /* Assets.xcassets */,
+				7A0EEFC7203E200200FA709D /* View Controllers */,
+				7A0D6D742022706400067A04 /* Data Management */,
+				7A0EEFC8203E227500FA709D /* Shared */,
 				7A0D6D5A201BC09000067A04 /* LaunchScreen.storyboard */,
+				7A0D6D58201BC09000067A04 /* Assets.xcassets */,
 				7A0D6D5D201BC09000067A04 /* Info.plist */,
 			);
 			path = Simmer;
@@ -178,21 +202,65 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		7A0D6D742022706400067A04 /* Data Managers */ = {
+		7A0D6D742022706400067A04 /* Data Management */ = {
 			isa = PBXGroup;
 			children = (
 				7A7B112A202A627900C4B4B2 /* Fetching */,
-				7A7B112B202A628D00C4B4B2 /* RealmManager.swift */,
 			);
-			path = "Data Managers";
+			path = "Data Management";
 			sourceTree = "<group>";
 		};
-		7A0D6D75202270DE00067A04 /* View Controllers */ = {
+		7A0EEFBC203E004300FA709D /* CBT List */ = {
 			isa = PBXGroup;
 			children = (
 				7A0D6D50201BC09000067A04 /* SessionListViewController.swift */,
 			);
+			path = "CBT List";
+			sourceTree = "<group>";
+		};
+		7A0EEFBD203E007E00FA709D /* CBT Composer */ = {
+			isa = PBXGroup;
+			children = (
+				7AFB706F203393B500E616E6 /* SessionComposerViewController.swift */,
+				7A0EEFBE203E047400FA709D /* Utility */,
+				7AFB707A2034B6D800E616E6 /* CollectionViewCells */,
+			);
+			path = "CBT Composer";
+			sourceTree = "<group>";
+		};
+		7A0EEFBE203E047400FA709D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7A5C10242035FDD90004C89E /* MoodCellSizer.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		7A0EEFC3203E1FA400FA709D /* Notification Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				7A0EEFC5203E1FFA00FA709D /* KeyboardNotificationHandler.swift */,
+			);
+			path = "Notification Handlers";
+			sourceTree = "<group>";
+		};
+		7A0EEFC7203E200200FA709D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A0EEFBC203E004300FA709D /* CBT List */,
+				7A0EEFBD203E007E00FA709D /* CBT Composer */,
+			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7A0EEFC8203E227500FA709D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7A0D6D71202105E900067A04 /* Models */,
+				7AFB706C203388F100E616E6 /* Protocols and Extensions */,
+				7A0EEFC3203E1FA400FA709D /* Notification Handlers */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		7A7B112A202A627900C4B4B2 /* Fetching */ = {
@@ -203,6 +271,7 @@
 				7A0D6D78202272F000067A04 /* SampleFetchResolver.swift */,
 				7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */,
 				7A0D6D76202271C100067A04 /* FetchResult.swift */,
+				7A7B112B202A628D00C4B4B2 /* RealmManager.swift */,
 			);
 			path = Fetching;
 			sourceTree = "<group>";
@@ -213,6 +282,26 @@
 				7A7B1132202A65EC00C4B4B2 /* CustomTestAssertions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7AFB706C203388F100E616E6 /* Protocols and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AD4AD2C2030CE9C00A24B42 /* DisplayableSessionCell.swift */,
+				7AFB707F2034B90E00E616E6 /* NibLoadable.swift */,
+			);
+			path = "Protocols and Extensions";
+			sourceTree = "<group>";
+		};
+		7AFB707A2034B6D800E616E6 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7AFB707B2034B70000E616E6 /* MoodCollectionViewCell.swift */,
+				7AFB707C2034B70000E616E6 /* MoodCollectionViewCell.xib */,
+				7A0EEFBF203E096800FA709D /* MoodEntryCollectionViewCell.swift */,
+				7A0EEFC0203E096800FA709D /* MoodEntryCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		D193830FE307D4D146962FCF /* Pods */ = {
@@ -315,9 +404,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A0EEFC2203E096800FA709D /* MoodEntryCollectionViewCell.xib in Resources */,
 				7A0D6D5C201BC09000067A04 /* LaunchScreen.storyboard in Resources */,
 				7A0D6D59201BC09000067A04 /* Assets.xcassets in Resources */,
 				7A0D6D54201BC09000067A04 /* Main.storyboard in Resources */,
+				7AFB707E2034B70000E616E6 /* MoodCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,12 +532,19 @@
 			files = (
 				7AAEAE3D202A53CD0005F1F3 /* RealmFetchResolver.swift in Sources */,
 				7A0D6D7B202272FA00067A04 /* FetchResolver.swift in Sources */,
+				7A0EEFC6203E1FFA00FA709D /* KeyboardNotificationHandler.swift in Sources */,
+				7A0EEFC1203E096800FA709D /* MoodEntryCollectionViewCell.swift in Sources */,
+				7AD4AD2D2030CE9C00A24B42 /* DisplayableSessionCell.swift in Sources */,
+				7AFB70802034B90E00E616E6 /* NibLoadable.swift in Sources */,
 				7A0D6D51201BC09000067A04 /* SessionListViewController.swift in Sources */,
 				7A0D6D732022704200067A04 /* FetchManager.swift in Sources */,
 				7A0D6D79202272F000067A04 /* SampleFetchResolver.swift in Sources */,
 				7A0D6D7D20227CAC00067A04 /* StoredSession.swift in Sources */,
 				7A7B1129202A612300C4B4B2 /* DisplayableSession.swift in Sources */,
 				7A7B112C202A628D00C4B4B2 /* RealmManager.swift in Sources */,
+				7A5C10252035FDD90004C89E /* MoodCellSizer.swift in Sources */,
+				7AFB7070203393B500E616E6 /* SessionComposerViewController.swift in Sources */,
+				7AFB707D2034B70000E616E6 /* MoodCollectionViewCell.swift in Sources */,
 				7A0D6D4F201BC09000067A04 /* AppDelegate.swift in Sources */,
 				7A0D6D77202271C100067A04 /* FetchResult.swift in Sources */,
 			);
@@ -457,12 +555,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0ABB11202502E5006EA0B3 /* MockFetchResolver.swift in Sources */,
+				7A0EEFCC203E27BA00FA709D /* MockNotificationCenter.swift in Sources */,
 				7A0D6D67201BC09000067A04 /* FetchManagerTests.swift in Sources */,
+				7A0EEFCA203E270F00FA709D /* KeyboardNotificationHandlerTests.swift in Sources */,
 				7A0ABB1420250580006EA0B3 /* MockSessionFetchManagerDelegate.swift in Sources */,
 				7A7B1137202A6A2E00C4B4B2 /* MockRealmManager.swift in Sources */,
-				7A7B1130202A649000C4B4B2 /* StoredSessionTests.swift in Sources */,
 				7A7B1135202A69DA00C4B4B2 /* RealmFetchResolverTests.swift in Sources */,
 				7A7B1133202A65EC00C4B4B2 /* CustomTestAssertions.swift in Sources */,
+				7AFB706E20338AF200E616E6 /* MockDisplayableSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
