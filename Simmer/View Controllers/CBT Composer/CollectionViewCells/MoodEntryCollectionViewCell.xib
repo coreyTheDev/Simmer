@@ -35,6 +35,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="252" height="125"/>
+            <connections>
+                <outlet property="moodEntryTextField" destination="7iJ-Zq-qIM" id="NCx-Ue-fXv"/>
+            </connections>
             <point key="canvasLocation" x="-67" y="91.5"/>
         </collectionViewCell>
     </objects>

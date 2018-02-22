@@ -8,33 +8,41 @@
 
 import UIKit
 
+fileprivate var moods: [String] = [
+    "Short",
+    "Longer",
+    "Longer still",
+    "Getting even longer still",
+    "Hopefully this is a multiple line mood",
+    "If not this is more than likely a multiple line mood",
+    "If not this definitely is probably possibly a very long, multiple line mood"
+]
+
 class SessionComposerViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    private let moods: [String] = [
-        "Short",
-        "Longer",
-        "Longer still",
-        "Getting even longer still",
-        "Hopefully this is a multiple line mood",
-        "If not this is more than likely a multiple line mood",
-        "If not this definitely is probably possibly a very long, multiple line mood"
-    ]
+    
     private let sizer = MoodCellSizer()
     private var keyboardNotificationHandler: KeyboardNotificationHandler?
+    private var moodEntryTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureNavigation()
         configureCollectionView()
         registerForNotifications()
     }
     
     // MARK: - Configuration
     
+    func configureNavigation() {
+        navigationItem.title = "Mood"
+        navigationItem.prompt = "Enter what emotions are coming up for you because of this situation."
+    }
+    
     func configureCollectionView() {
         collectionView.register(MoodCollectionViewCell.nib, forCellWithReuseIdentifier: MoodCollectionViewCell.nibName)
-        collectionView.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "SpacingCell")
         collectionView.register(MoodEntryCollectionViewCell.nib, forCellWithReuseIdentifier: MoodEntryCollectionViewCell.nibName)
     }
     
@@ -48,17 +56,15 @@ class SessionComposerViewController: UIViewController {
 extension SessionComposerViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return moods.count
-        case 1:
-            return 20
-        case 2:
             return 1
+        case 1:
+            return moods.count
         default:
             return 0
         }
@@ -66,14 +72,14 @@ extension SessionComposerViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
-        case 0:
+        case 1:
             let moodCell = collectionView.dequeueReusableCell(withReuseIdentifier: MoodCollectionViewCell.nibName, for: indexPath) as! MoodCollectionViewCell
             moodCell.moodLabel.text = moods[indexPath.item]
             return moodCell
-        case 1:
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "SpacingCell", for: indexPath)
-        case 2:
-            return collectionView.dequeueReusableCell(withReuseIdentifier: MoodEntryCollectionViewCell.nibName, for: indexPath)
+        case 0:
+            let moodEntryCell = collectionView.dequeueReusableCell(withReuseIdentifier: MoodEntryCollectionViewCell.nibName, for: indexPath) as! MoodEntryCollectionViewCell
+            moodEntryCell.moodEntryTextField.delegate = self
+            return moodEntryCell
         default:
             return UICollectionViewCell()
         }
@@ -86,7 +92,7 @@ extension SessionComposerViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
-        case 0:
+        case 1:
             let cellSize = sizer.cellSize(maxWidth: collectionView.frame.width, moodString: moods[indexPath.item])
             return cellSize
         default:
@@ -107,3 +113,30 @@ extension SessionComposerViewController: KeyboardNotificationHandlerDelegate {
     }
     
 }
+
+extension SessionComposerViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        moodEntryTextField = textField
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let newMoodText = textField.text, !newMoodText.isEmpty else {
+            return false
+        }
+        
+        textField.text = nil
+        
+        collectionView.performBatchUpdates({
+            moods.insert(newMoodText, at: 0)
+            collectionView.insertItems(at: [IndexPath(row: 0, section: 1)])
+        }, completion: nil)
+        
+        return false
+    }
+    
+}
+
+
+
+

@@ -10,6 +10,8 @@ import UIKit
 
 class MoodEntryCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var moodEntryTextField: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
