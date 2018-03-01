@@ -38,7 +38,9 @@ class SessionListViewController: UIViewController {
     // MARK: - Action Handling
     
     @IBAction func newSessionButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: Constants.SegueIdentifiers.segueToComposer, sender: self)
+        let newSessionCoordinator = NewSessionCoordinator()
+        newSessionCoordinator.delegate = self
+        present(newSessionCoordinator.viewController, animated: true, completion: nil)
     }
     
 }
@@ -71,6 +73,14 @@ extension SessionListViewController: FetchManagerDelegate {
         case .failure(let error):
             print("Fetch failed with \(error?.localizedDescription ?? "")")
         }
+    }
+    
+}
+
+extension SessionListViewController: NewSessionCoordinatorDelegate {
+    
+    func newSessionCoordinatorDidCancel(newSessionCoordinator: NewSessionCoordinator) {
+        dismiss(animated: true, completion: nil)
     }
     
 }

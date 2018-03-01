@@ -27,6 +27,11 @@
 		7A0EEFC6203E1FFA00FA709D /* KeyboardNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EEFC5203E1FFA00FA709D /* KeyboardNotificationHandler.swift */; };
 		7A0EEFCA203E270F00FA709D /* KeyboardNotificationHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EEFC9203E270F00FA709D /* KeyboardNotificationHandlerTests.swift */; };
 		7A0EEFCC203E27BA00FA709D /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EEFCB203E27BA00FA709D /* MockNotificationCenter.swift */; };
+		7A39FF2A20473970001F34D1 /* NewSessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A39FF2920473970001F34D1 /* NewSessionCoordinator.swift */; };
+		7A39FF2C20473F04001F34D1 /* MoodInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A39FF2B20473F04001F34D1 /* MoodInputViewController.xib */; };
+		7A39FF302048A58C001F34D1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A39FF2F2048A58C001F34D1 /* UIColor+Extensions.swift */; };
+		7A39FF322048AB74001F34D1 /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A39FF312048AB74001F34D1 /* UINavigationBar+Appearance.swift */; };
+		7A39FF342048B891001F34D1 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A39FF332048B891001F34D1 /* UICollectionView+Extensions.swift */; };
 		7A5C10252035FDD90004C89E /* MoodCellSizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C10242035FDD90004C89E /* MoodCellSizer.swift */; };
 		7A7B1129202A612300C4B4B2 /* DisplayableSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B1128202A612300C4B4B2 /* DisplayableSession.swift */; };
 		7A7B112C202A628D00C4B4B2 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B112B202A628D00C4B4B2 /* RealmManager.swift */; };
@@ -36,7 +41,7 @@
 		7AAEAE3D202A53CD0005F1F3 /* RealmFetchResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */; };
 		7AD4AD2D2030CE9C00A24B42 /* DisplayableSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD4AD2C2030CE9C00A24B42 /* DisplayableSessionCell.swift */; };
 		7AFB706E20338AF200E616E6 /* MockDisplayableSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB706D20338AF200E616E6 /* MockDisplayableSession.swift */; };
-		7AFB7070203393B500E616E6 /* SessionComposerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB706F203393B500E616E6 /* SessionComposerViewController.swift */; };
+		7AFB7070203393B500E616E6 /* MoodInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB706F203393B500E616E6 /* MoodInputViewController.swift */; };
 		7AFB707D2034B70000E616E6 /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB707B2034B70000E616E6 /* MoodCollectionViewCell.swift */; };
 		7AFB707E2034B70000E616E6 /* MoodCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AFB707C2034B70000E616E6 /* MoodCollectionViewCell.xib */; };
 		7AFB70802034B90E00E616E6 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB707F2034B90E00E616E6 /* NibLoadable.swift */; };
@@ -78,6 +83,11 @@
 		7A0EEFC5203E1FFA00FA709D /* KeyboardNotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationHandler.swift; sourceTree = "<group>"; };
 		7A0EEFC9203E270F00FA709D /* KeyboardNotificationHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationHandlerTests.swift; sourceTree = "<group>"; };
 		7A0EEFCB203E27BA00FA709D /* MockNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
+		7A39FF2920473970001F34D1 /* NewSessionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionCoordinator.swift; sourceTree = "<group>"; };
+		7A39FF2B20473F04001F34D1 /* MoodInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodInputViewController.xib; sourceTree = "<group>"; };
+		7A39FF2F2048A58C001F34D1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		7A39FF312048AB74001F34D1 /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
+		7A39FF332048B891001F34D1 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		7A5C10242035FDD90004C89E /* MoodCellSizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCellSizer.swift; sourceTree = "<group>"; };
 		7A7B1128202A612300C4B4B2 /* DisplayableSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableSession.swift; sourceTree = "<group>"; };
 		7A7B112B202A628D00C4B4B2 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -87,7 +97,7 @@
 		7AAEAE3C202A53CD0005F1F3 /* RealmFetchResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFetchResolver.swift; sourceTree = "<group>"; };
 		7AD4AD2C2030CE9C00A24B42 /* DisplayableSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableSessionCell.swift; sourceTree = "<group>"; };
 		7AFB706D20338AF200E616E6 /* MockDisplayableSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDisplayableSession.swift; sourceTree = "<group>"; };
-		7AFB706F203393B500E616E6 /* SessionComposerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionComposerViewController.swift; sourceTree = "<group>"; };
+		7AFB706F203393B500E616E6 /* MoodInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodInputViewController.swift; sourceTree = "<group>"; };
 		7AFB707B2034B70000E616E6 /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		7AFB707C2034B70000E616E6 /* MoodCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoodCollectionViewCell.xib; sourceTree = "<group>"; };
 		7AFB707F2034B90E00E616E6 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -172,6 +182,7 @@
 			children = (
 				7A0D6D4E201BC09000067A04 /* AppDelegate.swift */,
 				7A0D6D52201BC09000067A04 /* Main.storyboard */,
+				7A39FF2D20474068001F34D1 /* Coordinators */,
 				7A0EEFC7203E200200FA709D /* View Controllers */,
 				7A0D6D742022706400067A04 /* Data Management */,
 				7A0EEFC8203E227500FA709D /* Shared */,
@@ -210,22 +221,23 @@
 			path = "Data Management";
 			sourceTree = "<group>";
 		};
-		7A0EEFBC203E004300FA709D /* CBT List */ = {
+		7A0EEFBC203E004300FA709D /* Session List */ = {
 			isa = PBXGroup;
 			children = (
 				7A0D6D50201BC09000067A04 /* SessionListViewController.swift */,
 			);
-			path = "CBT List";
+			path = "Session List";
 			sourceTree = "<group>";
 		};
-		7A0EEFBD203E007E00FA709D /* CBT Composer */ = {
+		7A0EEFBD203E007E00FA709D /* Mood Input */ = {
 			isa = PBXGroup;
 			children = (
-				7AFB706F203393B500E616E6 /* SessionComposerViewController.swift */,
+				7AFB706F203393B500E616E6 /* MoodInputViewController.swift */,
+				7A39FF2B20473F04001F34D1 /* MoodInputViewController.xib */,
 				7A0EEFBE203E047400FA709D /* Utility */,
 				7AFB707A2034B6D800E616E6 /* CollectionViewCells */,
 			);
-			path = "CBT Composer";
+			path = "Mood Input";
 			sourceTree = "<group>";
 		};
 		7A0EEFBE203E047400FA709D /* Utility */ = {
@@ -247,8 +259,9 @@
 		7A0EEFC7203E200200FA709D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7A0EEFBC203E004300FA709D /* CBT List */,
-				7A0EEFBD203E007E00FA709D /* CBT Composer */,
+				7A39FF2E204744A6001F34D1 /* Situation Input */,
+				7A0EEFBC203E004300FA709D /* Session List */,
+				7A0EEFBD203E007E00FA709D /* Mood Input */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -261,6 +274,21 @@
 				7A0EEFC3203E1FA400FA709D /* Notification Handlers */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		7A39FF2D20474068001F34D1 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				7A39FF2920473970001F34D1 /* NewSessionCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		7A39FF2E204744A6001F34D1 /* Situation Input */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Situation Input";
 			sourceTree = "<group>";
 		};
 		7A7B112A202A627900C4B4B2 /* Fetching */ = {
@@ -289,6 +317,9 @@
 			children = (
 				7AD4AD2C2030CE9C00A24B42 /* DisplayableSessionCell.swift */,
 				7AFB707F2034B90E00E616E6 /* NibLoadable.swift */,
+				7A39FF2F2048A58C001F34D1 /* UIColor+Extensions.swift */,
+				7A39FF312048AB74001F34D1 /* UINavigationBar+Appearance.swift */,
+				7A39FF332048B891001F34D1 /* UICollectionView+Extensions.swift */,
 			);
 			path = "Protocols and Extensions";
 			sourceTree = "<group>";
@@ -408,6 +439,7 @@
 				7A0D6D5C201BC09000067A04 /* LaunchScreen.storyboard in Resources */,
 				7A0D6D59201BC09000067A04 /* Assets.xcassets in Resources */,
 				7A0D6D54201BC09000067A04 /* Main.storyboard in Resources */,
+				7A39FF2C20473F04001F34D1 /* MoodInputViewController.xib in Resources */,
 				7AFB707E2034B70000E616E6 /* MoodCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,12 +572,16 @@
 				7A0D6D732022704200067A04 /* FetchManager.swift in Sources */,
 				7A0D6D79202272F000067A04 /* SampleFetchResolver.swift in Sources */,
 				7A0D6D7D20227CAC00067A04 /* StoredSession.swift in Sources */,
+				7A39FF302048A58C001F34D1 /* UIColor+Extensions.swift in Sources */,
 				7A7B1129202A612300C4B4B2 /* DisplayableSession.swift in Sources */,
 				7A7B112C202A628D00C4B4B2 /* RealmManager.swift in Sources */,
+				7A39FF2A20473970001F34D1 /* NewSessionCoordinator.swift in Sources */,
+				7A39FF342048B891001F34D1 /* UICollectionView+Extensions.swift in Sources */,
 				7A5C10252035FDD90004C89E /* MoodCellSizer.swift in Sources */,
-				7AFB7070203393B500E616E6 /* SessionComposerViewController.swift in Sources */,
+				7AFB7070203393B500E616E6 /* MoodInputViewController.swift in Sources */,
 				7AFB707D2034B70000E616E6 /* MoodCollectionViewCell.swift in Sources */,
 				7A0D6D4F201BC09000067A04 /* AppDelegate.swift in Sources */,
+				7A39FF322048AB74001F34D1 /* UINavigationBar+Appearance.swift in Sources */,
 				7A0D6D77202271C100067A04 /* FetchResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
