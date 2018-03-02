@@ -18,21 +18,24 @@ protocol NewSessionCoordinatorDelegate: class {
     //func newSessionCoordinator(newSessionCoordinator: NewSessionCoordinator, didAdd orderPayload: NewOrderCoordinatorPayload)
 }
 
-class NewSessionCoordinator {
+class NewSessionCoordinator: Coordinator {
     
     weak var delegate: NewSessionCoordinatorDelegate?
+    var childCoordinators: [Coordinator] = []
+    
     var viewController: UIViewController {
         return navigationController
     }
-    
     private lazy var navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         return navigationController
     }()
+    
     private var moods: [String]?
     
-    init() {
+    func start() {
         let moodInputViewController = MoodInputViewController(nibName: "MoodInputViewController", bundle: Bundle.main)
+        moodInputViewController.delegate = self
         navigationController.viewControllers = [moodInputViewController]
     }
     
@@ -40,8 +43,12 @@ class NewSessionCoordinator {
 
 extension NewSessionCoordinator: MoodInputViewControllerDelegate {
     
-    func moodInputViewControllerDidFinish(with moods: [String]) {
+    func moodInputViewController(moodInputViewController: MoodInputViewController, didFinishWith moods: [String]) {
         self.moods = moods
+    }
+    
+    func moodInputViewControllerDidCancel(moodInputViewController: MoodInputViewController) {
+        delegate?.newSessionCoordinatorDidCancel(newSessionCoordinator: self)
     }
     
 }

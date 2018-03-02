@@ -24,10 +24,17 @@ class SessionListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigation()
         fetchSessions()
     }
 
     // MARK: - Configuration
+    
+    func configureNavigation() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    // MARK: - Data handling
     
     private func fetchSessions() {
         let fetchManager = FetchManager(resolver: RealmFetchResolver())
@@ -39,6 +46,9 @@ class SessionListViewController: UIViewController {
     
     @IBAction func newSessionButtonPressed(_ sender: Any) {
         let newSessionCoordinator = NewSessionCoordinator()
+        //TODO: call start
+        
+        
         newSessionCoordinator.delegate = self
         present(newSessionCoordinator.viewController, animated: true, completion: nil)
     }

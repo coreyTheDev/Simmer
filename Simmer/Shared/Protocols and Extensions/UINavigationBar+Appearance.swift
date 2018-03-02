@@ -18,7 +18,6 @@ extension UINavigationBar {
         UINavigationBar.appearance().titleTextAttributes = [
             NSAttributedStringKey.foregroundColor : UIColor.white
         ]
-        UINavigationBar.appearance().prefersLargeTitles = true
         UINavigationBar.appearance().largeTitleTextAttributes = [
             NSAttributedStringKey.foregroundColor : UIColor.white
         ]

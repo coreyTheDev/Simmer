@@ -19,12 +19,13 @@ fileprivate var moods: [String] = [
 ]
 
 protocol MoodInputViewControllerDelegate: class {
-    func moodInputViewControllerDidFinish(with moods: [String])
+    func moodInputViewController(moodInputViewController: MoodInputViewController, didFinishWith moods: [String])
+    func moodInputViewControllerDidCancel(moodInputViewController: MoodInputViewController)
 }
 
 class MoodInputViewController: UIViewController {
 
-    weak var delegate: MoodInputViewControllerDelegate?
+    var delegate: MoodInputViewControllerDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let sizer = MoodCellSizer()
@@ -42,6 +43,7 @@ class MoodInputViewController: UIViewController {
     // MARK: - Configuration
     
     func configureNavigation() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelPressed(sender:)))
         navigationItem.title =  NSLocalizedString("Mood", comment: "The title for the mood input view contorller")
         navigationItem.prompt = NSLocalizedString("Enter what emotions are coming up for you because of this situation.", comment: "Prompt telling users to write out the emotions that are coming up for them.")
     }
@@ -56,6 +58,13 @@ class MoodInputViewController: UIViewController {
     func registerForNotifications() {
         keyboardNotificationHandler = KeyboardNotificationHandler(scrollView: collectionView)
         keyboardNotificationHandler?.delegate = self
+    }
+    
+    // MARK: - Action handling
+    
+    @objc func cancelPressed(sender: UIBarButtonItem) {
+        print("delegate = \(self.delegate)")
+        self.delegate?.moodInputViewControllerDidCancel(moodInputViewController: self)
     }
     
 }
@@ -143,7 +152,3 @@ extension MoodInputViewController: UITextFieldDelegate {
     }
     
 }
-
-
-
-

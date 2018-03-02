@@ -12,11 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var appCoordinator: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Customize appearance for the app
         UINavigationBar.setupAppearance()
+        
+        // Setup AppCoordinator
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.appCoordinator = AppCoordinator(window: self.window!)
+        self.appCoordinator.start()
+        
         return true
     }
 
