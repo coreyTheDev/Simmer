@@ -1,5 +1,5 @@
 //
-//  SessionComposerViewController.swift
+//  MoodInputViewController.swift
 //  Simmer
 //
 //  Created by Corey Zanotti on 2/13/18.
@@ -18,13 +18,19 @@ fileprivate var moods: [String] = [
     "If not this definitely is probably possibly a very long, multiple line mood"
 ]
 
-class SessionComposerViewController: UIViewController {
+protocol MoodInputViewControllerDelegate: class {
+    func moodInputViewController(moodInputViewController: MoodInputViewController, didFinishWith moods: [String])
+    func moodInputViewControllerDidCancel(moodInputViewController: MoodInputViewController)
+}
 
+class MoodInputViewController: UIViewController {
+
+    var delegate: MoodInputViewControllerDelegate?
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let sizer = MoodCellSizer()
     private var keyboardNotificationHandler: KeyboardNotificationHandler?
-    private var moodEntryTextField: UITextField?
+    private weak var moodEntryTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +43,14 @@ class SessionComposerViewController: UIViewController {
     // MARK: - Configuration
     
     func configureNavigation() {
-        navigationItem.title = "Mood"
-        navigationItem.prompt = "Enter what emotions are coming up for you because of this situation."
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelPressed(sender:)))
+        navigationItem.title =  NSLocalizedString("Mood", comment: "The title for the mood input view contorller")
+        navigationItem.prompt = NSLocalizedString("Enter what emotions are coming up for you because of this situation.", comment: "Prompt telling users to write out the emotions that are coming up for them.")
     }
     
     func configureCollectionView() {
+        collectionView.contentInset = UIEdgeInsetsMake(15, 15, 15, 15)
+        
         collectionView.register(MoodCollectionViewCell.nib, forCellWithReuseIdentifier: MoodCollectionViewCell.nibName)
         collectionView.register(MoodEntryCollectionViewCell.nib, forCellWithReuseIdentifier: MoodEntryCollectionViewCell.nibName)
     }
@@ -51,9 +60,16 @@ class SessionComposerViewController: UIViewController {
         keyboardNotificationHandler?.delegate = self
     }
     
+    // MARK: - Action handling
+    
+    @objc func cancelPressed(sender: UIBarButtonItem) {
+        print("delegate = \(self.delegate)")
+        self.delegate?.moodInputViewControllerDidCancel(moodInputViewController: self)
+    }
+    
 }
 
-extension SessionComposerViewController: UICollectionViewDataSource {
+extension MoodInputViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -88,21 +104,21 @@ extension SessionComposerViewController: UICollectionViewDataSource {
     
 }
 
-extension SessionComposerViewController: UICollectionViewDelegateFlowLayout {
+extension MoodInputViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 1:
-            let cellSize = sizer.cellSize(maxWidth: collectionView.frame.width, moodString: moods[indexPath.item])
+            let cellSize = sizer.cellSize(maxWidth: collectionView.displayableWidth(), moodString: moods[indexPath.item])
             return cellSize
         default:
-            return CGSize(width: collectionView.frame.width, height: 50)
+            return CGSize(width: collectionView.displayableWidth(), height: 50)
         }
     }
     
 }
 
-extension SessionComposerViewController: KeyboardNotificationHandlerDelegate {
+extension MoodInputViewController: KeyboardNotificationHandlerDelegate {
     
     func keyboardDidShow(_ notificationHandler: KeyboardNotificationHandler) {
         // TODO: Add test for scrolling text field to visible
@@ -114,7 +130,7 @@ extension SessionComposerViewController: KeyboardNotificationHandlerDelegate {
     
 }
 
-extension SessionComposerViewController: UITextFieldDelegate {
+extension MoodInputViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         moodEntryTextField = textField
@@ -136,7 +152,3 @@ extension SessionComposerViewController: UITextFieldDelegate {
     }
     
 }
-
-
-
-

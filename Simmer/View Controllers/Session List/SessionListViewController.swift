@@ -8,26 +8,31 @@
 
 import UIKit
 
-fileprivate struct Constants {
-    struct SegueIdentifiers {
-        static let segueToComposer = "SegueToComposer"
-    }
-    struct CellIdentifiers {
-        static let titleSubtitleCell = "TitleSubtitleCell"
-    }
+protocol SessionListViewControllerDelegate: class {
+    func sessionListViewControllerDidSelectNewSession(sessionListViewController: SessionListViewController)
 }
 
 class SessionListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    weak var delegate: SessionListViewControllerDelegate?
     private var sessions: [DisplayableSession]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigation()
         fetchSessions()
     }
 
     // MARK: - Configuration
+    
+    func configureNavigation() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newSessionButtonPressed(_:)))
+        navigationItem.title =  NSLocalizedString("Sessions", comment: "The title for the Sessions landing view")
+    }
+    
+    // MARK: - Data handling
     
     private func fetchSessions() {
         let fetchManager = FetchManager(resolver: RealmFetchResolver())
@@ -37,8 +42,8 @@ class SessionListViewController: UIViewController {
     
     // MARK: - Action Handling
     
-    @IBAction func newSessionButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: Constants.SegueIdentifiers.segueToComposer, sender: self)
+    @objc func newSessionButtonPressed(_ sender: Any) {
+        delegate?.sessionListViewControllerDidSelectNewSession(sessionListViewController: self)
     }
     
 }
@@ -54,7 +59,8 @@ extension SessionListViewController: UITableViewDataSource {
             fatalError("Can't dequeue cell: There are no sessions to display.")
         }
         
-        let titleSubtitleCell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.titleSubtitleCell, for: indexPath)
+        //TODO: Create cell subclass or re-register a basic cell
+        let titleSubtitleCell = tableView.dequeueReusableCell(withIdentifier: "titleSubtitleCell", for: indexPath)
         titleSubtitleCell.configure(with: sessions[indexPath.row])
         return titleSubtitleCell
     }

@@ -13,11 +13,13 @@ protocol NibLoadable {
     static var nibName: String { get }
 }
 
-extension NibLoadable where Self: UIView {
-    
+extension NibLoadable {
     static var nibName: String {
         return String(describing: self)
     }
+}
+
+extension NibLoadable where Self: UIView {
     
     static var nib: UINib {
         return UINib(nibName: nibName, bundle: nil)
@@ -35,3 +37,5 @@ extension NibLoadable where Self: UIView {
 }
 
 extension UICollectionViewCell: NibLoadable { }
+
+extension UIViewController: NibLoadable { }
