@@ -19,7 +19,7 @@ class AppCoordinator: Coordinator {
         return self.navigationController
     }
     
-    /// Window to manage
+    // Window to manage
     let window: UIWindow
     
     private lazy var navigationController: UINavigationController = {
@@ -37,10 +37,30 @@ class AppCoordinator: Coordinator {
     
     // MARK: - Functions
     
-    /// Starts the coordinator
+    // Starts the coordinator
     public func start() {
         let sessionListViewController = SessionListViewController(nibName: SessionListViewController.nibName, bundle: nil)
+        sessionListViewController.delegate = self
         navigationController.viewControllers = [sessionListViewController]
+    }
+    
+}
+
+extension AppCoordinator: SessionListViewControllerDelegate {
+    
+    func sessionListViewControllerDidSelectNewSession(sessionListViewController: SessionListViewController) {
+        let newSessionCoordinator = NewSessionCoordinator()
+        newSessionCoordinator.delegate = self
+        newSessionCoordinator.start()
+        viewController.present(newSessionCoordinator.viewController, animated: true, completion: nil)
+    }
+    
+}
+
+extension AppCoordinator: NewSessionCoordinatorDelegate {
+    
+    func newSessionCoordinatorDidCancel(newSessionCoordinator: NewSessionCoordinator) {
+        viewController.dismiss(animated: true, completion: nil)
     }
     
 }

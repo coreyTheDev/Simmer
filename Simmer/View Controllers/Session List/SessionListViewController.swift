@@ -8,18 +8,14 @@
 
 import UIKit
 
-fileprivate struct Constants {
-    struct SegueIdentifiers {
-        static let segueToComposer = "SegueToComposer"
-    }
-    struct CellIdentifiers {
-        static let titleSubtitleCell = "TitleSubtitleCell"
-    }
+protocol SessionListViewControllerDelegate: class {
+    func sessionListViewControllerDidSelectNewSession(sessionListViewController: SessionListViewController)
 }
 
 class SessionListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    weak var delegate: SessionListViewControllerDelegate?
     private var sessions: [DisplayableSession]?
     
     override func viewDidLoad() {
@@ -32,6 +28,8 @@ class SessionListViewController: UIViewController {
     
     func configureNavigation() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newSessionButtonPressed(_:)))
+        navigationItem.title =  NSLocalizedString("Sessions", comment: "The title for the Sessions landing view")
     }
     
     // MARK: - Data handling
@@ -44,13 +42,8 @@ class SessionListViewController: UIViewController {
     
     // MARK: - Action Handling
     
-    @IBAction func newSessionButtonPressed(_ sender: Any) {
-        let newSessionCoordinator = NewSessionCoordinator()
-        //TODO: call start
-        
-        
-        newSessionCoordinator.delegate = self
-        present(newSessionCoordinator.viewController, animated: true, completion: nil)
+    @objc func newSessionButtonPressed(_ sender: Any) {
+        delegate?.sessionListViewControllerDidSelectNewSession(sessionListViewController: self)
     }
     
 }
@@ -66,7 +59,8 @@ extension SessionListViewController: UITableViewDataSource {
             fatalError("Can't dequeue cell: There are no sessions to display.")
         }
         
-        let titleSubtitleCell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.titleSubtitleCell, for: indexPath)
+        //TODO: Create cell subclass or re-register a basic cell
+        let titleSubtitleCell = tableView.dequeueReusableCell(withIdentifier: "titleSubtitleCell", for: indexPath)
         titleSubtitleCell.configure(with: sessions[indexPath.row])
         return titleSubtitleCell
     }
@@ -83,14 +77,6 @@ extension SessionListViewController: FetchManagerDelegate {
         case .failure(let error):
             print("Fetch failed with \(error?.localizedDescription ?? "")")
         }
-    }
-    
-}
-
-extension SessionListViewController: NewSessionCoordinatorDelegate {
-    
-    func newSessionCoordinatorDidCancel(newSessionCoordinator: NewSessionCoordinator) {
-        dismiss(animated: true, completion: nil)
     }
     
 }
